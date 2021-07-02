@@ -1,0 +1,21 @@
+/* .logo-resize{
+    width: 100px;
+    height: auto;
+}
+
+.hei{
+    color: blue;
+} */
+
+.remove_line{
+    text-decoration: none;
+}
+
+/* .trans:hover{
+
+    padding: 10px;
+
+} */
+
+.trans { transition: all .2s ease-in-out; }
+.trans:hover { transform: scale(1.05); z-index: 1; border-color: #243F8D;}
