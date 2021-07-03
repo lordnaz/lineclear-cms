@@ -19,7 +19,7 @@
                         <br>
                         <div class="row text-center">
                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                <div class="card mb-3 trans" style="max-width: auto;">
+                                <div class="card mb-3 trans" style="max-width: auto;" onclick="window.location='{{ url("faq") }}'">
                                     <div class="row g-0">
                                         <div class="col-md-4">
                                             <img src="https://image.freepik.com/free-vector/flat-frequently-asked-questions-background_23-2148169717.jpg" class="img-fluid rounded-start" alt="...">

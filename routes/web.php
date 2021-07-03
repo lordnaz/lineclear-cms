@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\FaqController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,11 +16,23 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', function () {
-    return redirect('login');
+
+    if(auth()->user()){
+        return redirect('home');
+    }else{
+        // return view('auth.login');
+        return redirect('login');
+    }
+
 });
 
 Route::get('/dashboard', function () {
-    return redirect('home');
+    if(auth()->user()){
+        return redirect('home');
+    }else{
+        // return view('auth.login');
+        return redirect('login');
+    }
 });
 
 // Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
@@ -27,3 +40,7 @@ Route::get('/dashboard', function () {
 // })->name('dashboard');
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+Route::get('/faq', [FaqController::class, 'index'])->name('faq');
+
+Route::post('/submit_faq', [FaqController::class, 'submitFaq']);
