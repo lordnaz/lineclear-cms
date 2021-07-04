@@ -7,6 +7,14 @@
     color: blue;
 } */
 
+.removeBorderColor:focus{
+    border-color: white !important;
+}
+
+p{
+    margin-bottom: 0rem !important;
+}
+
 .remove_line{
     text-decoration: none;
 }

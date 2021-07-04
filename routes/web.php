@@ -44,3 +44,11 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/faq', [FaqController::class, 'index'])->name('faq');
 
 Route::post('/submit_faq', [FaqController::class, 'submitFaq']);
+
+Route::post('/update_faq', [FaqController::class, 'updateFaq']);
+
+Route::get('/edit_faq/{id}', [FaqController::class, 'editFaq'])->name('edit_faq');
+
+Route::get('/delete_parent/{id}', [FaqController::class, 'deleteParent'])->name('delete_parent');
+
+Route::get('/delete_child/{id}', [FaqController::class, 'deleteChild'])->name('delete_child');

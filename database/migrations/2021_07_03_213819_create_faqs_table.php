@@ -18,8 +18,9 @@ class CreateFaqsTable extends Migration
             $table->integer('parent_id')->nullable();
             $table->integer('sort_no');
             $table->longText('question_str');
-            $table->longText('answer_str');
+            $table->longText('answer_str')->nullable();
             $table->integer('updated_by');
+            $table->boolean('active')->default(true);
             $table->timestamps();
         });
     }
