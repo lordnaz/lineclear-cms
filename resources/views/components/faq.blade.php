@@ -39,7 +39,7 @@
                                 
                                 <label for="inputEmail3" class="col-sm-2 col-form-label">Parent ID</label>
                                 <div class="col-sm-10">
-                                    <select class="form-select" name="parent_id" id="parent_id" aria-label="Default select example">
+                                    <select class="form-select form-control" name="parent_id" id="parent_id" aria-label="Default select example">
                                         <!-- <option selected disabled="">Choose parent ID</option> -->
                                         <option selected value="">No parent ID, I am the main question.</option>
                                         @foreach($parentsOnly as $main)
@@ -143,7 +143,7 @@
 
                         <div class="row">
                             @foreach($parents as $parent)
-                                @if ($parent->parent_id === null || $parent->parent_id === "")
+                                @if ($parent->parent_id == null || $parent->parent_id == "")
 
                                     <div class="accordion" id="accordionPanelsStayOpenExample">
                                         <div class="accordion-item" style="border: none">
@@ -159,7 +159,7 @@
                                             <a href="{{route('delete_parent', $parent->id)}}" class="float-end btn btn-outline-danger">Delete</a>
                                             <div id="panelsStayOpen-collapse_{{$parent->id}}" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading_{{$parent->id}}">
                                                 <!-- <hr> -->
-                                                @if ($parent->answer_str === null || $parent->answer_str === "")
+                                                @if ($parent->answer_str == null || $parent->answer_str == "")
                                                     
                                                 @else
                                                     
@@ -169,7 +169,8 @@
                                                 @endif
 
                                                 @foreach($parents as $child)
-                                                    @if ($child->parent_id === $parent->id)
+
+                                                    @if ($child->parent_id == $parent->id)
                                                         <div class="accordion-item" style="border: none">
                                                             <h2 class="accordion-header" id="panelsStayOpen-heading_{{$child->id}}">
                                                             <button class="accordion-button collapsed" 
@@ -183,7 +184,7 @@
                                                             <a href="{{route('edit_faq', $child->id)}}" class="float-end btn btn-outline-info" style="margin-left: 15px;">edit</a>
                                                             <a href="{{route('delete_child', $child->id)}}" class="float-end btn btn-outline-danger">Delete</a>
                                                             <div id="panelsStayOpen-collapse_{{$child->id}}" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading_{{$child->id}}">
-                                                            @if ($child->answer_str === null || $child->answer_str === "")
+                                                            @if ($child->answer_str == null || $child->answer_str == "")
                                                     
                                                             @else
                                                                 <div class="accordion-body">

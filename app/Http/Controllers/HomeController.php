@@ -9,6 +9,12 @@ class HomeController extends Controller
     //
     public function index(){
 
-        return view('components.home');
+        if(auth()->user()){
+            return redirect('home');
+        }else{
+            // return view('auth.login');
+            return redirect('login');
+        }
+
     }
 }
