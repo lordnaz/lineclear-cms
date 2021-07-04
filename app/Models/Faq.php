@@ -15,4 +15,5 @@ class Faq extends Model
      * @var string
      */
     protected $table = 'faqs';
+
 }
