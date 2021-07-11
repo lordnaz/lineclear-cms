@@ -38,7 +38,7 @@
                             <input type="hidden" name="id" value="{{$item->id}}">
 
                             <div class="row mb-3">
-                                <label for="inputEmail3" class="col-sm-2 col-form-label">Priority</label>
+                                <label for="inputEmail3" class="col-sm-2 col-form-label">Numbering</label>
                                 <div class="col-sm-10">
                                     <input type="number" class="form-control" id="number" name="number" min="0" max="100" value="{{$item->sort_no}}">
                                     <p class="mt-2 text-sm text-red-500">
@@ -48,8 +48,8 @@
                                             <use xlink:href="#info-fill"/></svg>
                                             <div style="font-size: 14px;">
                                                 <ol>
-                                                    <li>1. Priority for sorting purposes, smallest number will be the top priorities on the FAQ list.</li>
-                                                    <li>2. Priority also being used in question numbering.</li>
+                                                    <li>1. Numbering for sorting purposes, smallest number will be the top priorities on the FAQ list.</li>
+                                                    <li>2. Numbering also being used in question numbering.</li>
                                                     <li>3. If user decide this is a "Main Question/Title" then, priority will be displayed
                                                     as the numbering. If user decide this question has parent ID, priority will be displayed as decimal numbering of its Parent ID.</li>
                                                     <li>4. For example , (Main Question --> 1. This is a Title) &nbsp; (Sub Question --> 1.1. This is a Sub-Question).</li>
