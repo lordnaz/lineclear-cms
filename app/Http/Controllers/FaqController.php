@@ -130,7 +130,10 @@ class FaqController extends Controller
 
     public function retrieveFaq(){
 
-        $getAll = Faq::all();
+        // $getAll = Faq::all();
+        $getAll = Faq::where('active', 1)
+                    ->orderBy('sort_no', 'asc')
+                    ->get();
 
         $data = [ 
             'status' => true,
