@@ -13,25 +13,16 @@ class AnnouncerController extends Controller
 
         $announcer = Announcer::first();
 
-        $active = $announcer->active;
-        $imageURL = url('/').$announcer->image_path;
+        if($announcer){
+            $active = $announcer->active;
+            $imageURL = url('/').$announcer->image_path;
+
+            return view('components.announcer', compact('imageURL', 'active'));
+        }else{
+            return view('components.announcer');
+        }
+
         
-
-        // return $announcer->image_path;
-
-        // return $announcer;
-        // die();
-
-        // $parentsOnly = Faq::where('parent_id', null)
-        //                 ->where('active', true)
-        //                 ->orderBy('sort_no', 'asc')
-        //                 ->get();
-
-        // return view('components.faq', compact('parents', 'parentsOnly'));
-        
-        // return view('components.announcer');
-
-        return view('components.announcer', compact('imageURL', 'active'));
 
     }
 
