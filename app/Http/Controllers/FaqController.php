@@ -81,7 +81,7 @@ class FaqController extends Controller
         $answer = $req->editor2;
 
         if($req->parent_id == "" || $req->parent_id == null){
-            $answer = "";
+            $answer = null;
         }
 
         $faq = new Faq;

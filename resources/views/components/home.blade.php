@@ -76,7 +76,7 @@
                             </div>
 
                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                <div class="card mb-3 trans" style="max-width: auto;">
+                                <div class="card mb-3 trans" style="max-width: auto;" onclick="window.location='{{ url("announcer") }}'">
                                     <div class="row g-0">
                                         <div class="col-md-4">
                                             <img src="https://assets.materialup.com/uploads/13f5292f-09b2-4590-a713-6e2030ba0387/preview.gif" class="img-fluid rounded-start" alt="...">

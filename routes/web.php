@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\FaqController;
+use App\Http\Controllers\AnnouncerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,3 +53,7 @@ Route::get('/edit_faq/{id}', [FaqController::class, 'editFaq'])->name('edit_faq'
 Route::get('/delete_parent/{id}', [FaqController::class, 'deleteParent'])->name('delete_parent');
 
 Route::get('/delete_child/{id}', [FaqController::class, 'deleteChild'])->name('delete_child');
+
+Route::get('/announcer', [AnnouncerController::class, 'index'])->name('announcer');
+
+Route::post('/update_popup', [AnnouncerController::class, 'update_popup']);
