@@ -121,4 +121,21 @@ class AnnouncerController extends Controller
 
         return $file_name;
     }
+
+
+    // API SECTION 
+    public function retrieve_popup(){
+
+        $announcer = Announcer::first();
+
+        $data = [ 
+            'status' => true,
+            'apiName' => "retrievePopup"
+        ];
+
+        $data['data'] = $announcer;
+
+        return response()->json($data);
+
+    }
 }
