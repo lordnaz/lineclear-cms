@@ -48,7 +48,7 @@
                                     
                                     <div class="mt-4 space-y-4">
                                         <label for="preview" class="form-label">Image Preview</label>
-                                        <img src="{{$imageURL}}" class="img-fluid border border-dark" alt="...">
+                                        <img src="{{$imageURL ?? ''}}" class="img-fluid border border-dark" alt="...">
                                     </div>
 
                                     <div class="px-4 py-3 text-right sm:px-6">

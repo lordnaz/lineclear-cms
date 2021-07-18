@@ -19,7 +19,10 @@ class AnnouncerController extends Controller
 
             return view('components.announcer', compact('imageURL', 'active'));
         }else{
-            return view('components.announcer');
+            $active = 2;
+            $imageURL = null;
+
+            return view('components.announcer', compact('imageURL', 'active'));
         }
 
         
@@ -72,9 +75,7 @@ class AnnouncerController extends Controller
                                         'updated_by' => auth()->user()->id,
                                         'updated_at' => $currentdt
                                     ]);
-
-                return $image_path;
-                die();                  
+                
             }
 
         }else{
@@ -91,9 +92,7 @@ class AnnouncerController extends Controller
 
         }
 
-        return $req;
-
-        // die();
+        return redirect()->route('announcer');
 
     }
 
