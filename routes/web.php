@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\AnnouncerController;
+use App\Http\Controllers\BannerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,3 +58,10 @@ Route::get('/delete_child/{id}', [FaqController::class, 'deleteChild'])->name('d
 Route::get('/announcer', [AnnouncerController::class, 'index'])->name('announcer');
 
 Route::post('/update_popup', [AnnouncerController::class, 'update_popup']);
+
+Route::get('/banner', [BannerController::class, 'index'])->name('banner');
+
+Route::post('/upload_banner', [BannerController::class, 'upload_banner']);
+
+Route::get('/remove_banner/{id}', [BannerController::class, 'remove_banner'])->name('remove_banner');
+

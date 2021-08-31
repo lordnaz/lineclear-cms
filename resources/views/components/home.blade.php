@@ -36,7 +36,7 @@
                             </div>
 
                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                <div class="card mb-3 trans" style="max-width: auto;">
+                                <div class="card mb-3 trans" style="max-width: auto;" onclick="window.location='{{ url("banner") }}'">
                                     <div class="row g-0">
                                         <div class="col-md-4">
                                             <img src="https://images-platform.99static.com/a0KDc4pTSu1OJzGE9AGTHpJX0hg=/37x100:648x711/500x500/top/smart/99designs-contests-attachments/87/87343/attachment_87343622" class="img-fluid rounded-start" alt="...">
