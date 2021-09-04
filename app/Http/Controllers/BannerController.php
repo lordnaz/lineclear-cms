@@ -48,39 +48,26 @@ class BannerController extends Controller
         $image_path = null;
 
         if($formFile){
-            $uploadFile = $this->UploadFile($formFile);
-            $image_path = "/storage/banner/".$uploadFile;
+            $uploadFileDestop = $this->UploadFile($formFile);
+            $image_path_desktop = "/storage/banner/".$uploadFileDestop;
             $flag = true;
         }
-
-        if($uploadFile != null){
-            $add_banner = Banner::create([
-                'sort_value' => $req->sort,
-                'image_path' => $image_path,
-                'external_link' => $req->link,
-                'type' => 'desktop',
-                'updated_by' => $uuid,
-                'created_at' => $currentdt,
-                'updated_at' => $currentdt
-            ]);
-        }
-
 
         $formFile = $req->file('mobileBanner');
         $image_path = null;
 
         if($formFile){
-            $uploadFile = $this->UploadFile($formFile);
-            $image_path = "/storage/banner/".$uploadFile;
+            $uploadFileMobile = $this->UploadFile($formFile);
+            $image_path_mobile = "/storage/banner/".$uploadFileMobile;
             $flag = true;
         }
 
-        if($uploadFile != null){
+        if($uploadFileDestop != null && $uploadFileMobile != null){
             $add_banner = Banner::create([
                 'sort_value' => $req->sort,
-                'image_path' => $image_path,
+                'image_path_desktop' => $image_path_desktop,
+                'image_path_mobile' => $image_path_mobile,
                 'external_link' => $req->link,
-                'type' => 'mobile',
                 'updated_by' => $uuid,
                 'created_at' => $currentdt,
                 'updated_at' => $currentdt
@@ -109,5 +96,24 @@ class BannerController extends Controller
     	}
 
         return $file_name;
+    }
+
+
+    // API SECTION 
+
+    public function retrieve_banner(){
+
+        $getAll = Banner::where('active', 1)
+                        ->orderBy('sort_value', 'asc')
+                        ->get();
+
+        $data = [ 
+            'status' => true,
+            'apiName' => "retrieveBanner"
+        ];
+
+        $data['data'] = $getAll;
+
+        return response()->json($data);
     }
 }

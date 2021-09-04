@@ -5,10 +5,10 @@
                 Sorting
             </th>
             <th>
-                Type
+                Image Desktop URL
             </th>
             <th>
-                Image URL
+                Image Mobile URL
             </th>
             <th>
                 External URL
@@ -30,11 +30,15 @@
                 <td>
                     {{ $item->sort_value }}
                 </td>
+
                 <td>
-                    {{ $item->type }}
+                    <a href="{{ env('APP_URL').$item->image_path_desktop }}" target="_blank">
+                        View
+                    </a> 
+                    {{-- {{ env('APP_URL').$item->image_path }} --}}
                 </td>
                 <td>
-                    <a href="{{ env('APP_URL').$item->image_path }}" target="_blank">
+                    <a href="{{ env('APP_URL').$item->image_path_mobile }}" target="_blank">
                         View
                     </a> 
                     {{-- {{ env('APP_URL').$item->image_path }} --}}
