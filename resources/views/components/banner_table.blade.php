@@ -11,6 +11,9 @@
                 Image URL
             </th>
             <th>
+                External URL
+            </th>
+            <th>
                 Status
             </th>
             <th>
@@ -33,6 +36,12 @@
                 <td>
                     <a href="{{ env('APP_URL').$item->image_path }}" target="_blank">
                         View
+                    </a> 
+                    {{-- {{ env('APP_URL').$item->image_path }} --}}
+                </td>
+                <td>
+                    <a href="{{ $item->external_link }}" target="_blank">
+                        {{ $item->external_link }}
                     </a> 
                     {{-- {{ env('APP_URL').$item->image_path }} --}}
                 </td>

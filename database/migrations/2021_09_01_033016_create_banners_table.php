@@ -17,6 +17,7 @@ class CreateBannersTable extends Migration
             $table->id();
             $table->integer('sort_value');
             $table->text('image_path');
+            $table->text('external_link');
             $table->string('type');
             $table->integer('updated_by');
             $table->boolean('active')->default(true);

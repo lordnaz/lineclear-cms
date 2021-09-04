@@ -49,6 +49,11 @@
                                         <input type="file" class="form-control" name="mobileBanner" id="mobileBanner" accept="file/*" required>
                                     </div>
 
+                                    <div class="col-md-10 mb-3">
+                                        <label for="sort" class="form-label">External Link (Optional)</label>
+                                        <input type="text" class="form-control" name="link" id="link">
+                                    </div>
+
                                     <div class="d-grid gap-2 col-md-10">
                                         <button class="btn btn-info" type="submit">Confirm</button>
                                     </div>

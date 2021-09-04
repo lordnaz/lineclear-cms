@@ -57,6 +57,7 @@ class BannerController extends Controller
             $add_banner = Banner::create([
                 'sort_value' => $req->sort,
                 'image_path' => $image_path,
+                'external_link' => $req->link,
                 'type' => 'desktop',
                 'updated_by' => $uuid,
                 'created_at' => $currentdt,
@@ -78,6 +79,7 @@ class BannerController extends Controller
             $add_banner = Banner::create([
                 'sort_value' => $req->sort,
                 'image_path' => $image_path,
+                'external_link' => $req->link,
                 'type' => 'mobile',
                 'updated_by' => $uuid,
                 'created_at' => $currentdt,

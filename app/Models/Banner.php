@@ -19,6 +19,7 @@ class Banner extends Model
     protected $fillable = [
         'sort_value',
         'image_path',
+        'external_link',
         'type',
         'updated_by',
         'active',
