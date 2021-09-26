@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\AnnouncerController;
 use App\Http\Controllers\BannerController;
+use App\Http\Controllers\SliderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -64,4 +65,10 @@ Route::get('/banner', [BannerController::class, 'index'])->name('banner');
 Route::post('/upload_banner', [BannerController::class, 'upload_banner']);
 
 Route::get('/remove_banner/{id}', [BannerController::class, 'remove_banner'])->name('remove_banner');
+
+Route::get('/slider', [SliderController::class, 'index'])->name('slider');
+
+Route::post('/upload_slider', [SliderController::class, 'upload_slider']);
+
+Route::get('/remove_slider/{id}', [SliderController::class, 'remove_slider'])->name('remove_slider');
 

@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\AnnouncerController;
 use App\Http\Controllers\BannerController;
+use App\Http\Controllers\SliderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +27,5 @@ Route::middleware('auth:sanctum')->get('/retrieve_faq', [FaqController::class, '
 Route::middleware('auth:sanctum')->get('/retrieve_popup', [AnnouncerController::class, 'retrieve_popup']);
 
 Route::middleware('auth:sanctum')->get('/retrieve_banner', [BannerController::class, 'retrieve_banner']);
+
+Route::middleware('auth:sanctum')->get('/retrieve_slider', [SliderController::class, 'retrieve_slider']);

@@ -2,7 +2,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('BANNER CHANGER') }}
+            {{ __('SOCIAL MEDIA SLIDER CHANGER') }}
         </h2>
     </x-slot>
 
@@ -14,15 +14,15 @@
                 <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
                     <div class="container-fluid">
 
-                        <legend class="text-3xl font-bold text-gray-900" style="font-weight: bold;">Carousel Banner Changer</legend>
-                        <small class="text-muted">( Upload image for carousel banner on the websites )</small>
+                        <legend class="text-3xl font-bold text-gray-900" style="font-weight: bold;">Social Media Slider Changer</legend>
+                        <small class="text-muted">( Upload image for social media slider on the websites )</small>
 
                         <hr>
                         <br>
                             
                         <div class="row">
                             <div class="col-5">
-                                <form action="/upload_banner" id="updatePopup" method="post" enctype="multipart/form-data" accept-charset='UTF-8'>
+                                <form action="/upload_slider" id="updatePopup" method="post" enctype="multipart/form-data" accept-charset='UTF-8'>
 
                                     @csrf
 
@@ -40,21 +40,21 @@
                                     </div>
 
                                     <div class="col-md-10 mb-3">
-                                        <label for="desktopBanner" class="form-label">Upload Banner (Desktop)</label>
-                                        <input type="file" class="form-control" name="desktopBanner" id="desktopBanner" accept="file/*" required>
+                                        <label for="desktopSlider" class="form-label">Upload Slider</label>
+                                        <input type="file" class="form-control" name="desktopSlider" id="desktopSlider" accept="file/*" required>
                                         <small><i>Maximum file size is 20MB</i></small>
                                     </div>
 
-                                    <div class="col-md-10 mb-3">
-                                        <label for="mobileBanner" class="form-label">Upload Banner (Mobile)</label>
-                                        <input type="file" class="form-control" name="mobileBanner" id="mobileBanner" accept="file/*" required>
+                                    {{-- <div class="col-md-10 mb-3">
+                                        <label for="mobileSlider" class="form-label">Upload Banner (Mobile)</label>
+                                        <input type="file" class="form-control" name="mobileSlider" id="mobileSlider" accept="file/*" required>
                                         <small><i>Maximum file size is 20MB</i></small>
-                                    </div>
+                                    </div> --}}
 
-                                    <div class="col-md-10 mb-3">
+                                    {{-- <div class="col-md-10 mb-3">
                                         <label for="sort" class="form-label">External Link (Optional)</label>
                                         <input type="text" class="form-control" name="link" id="link">
-                                    </div>
+                                    </div> --}}
 
                                     <div class="d-grid gap-2 col-md-10">
                                         <button class="btn btn-info" type="submit">Confirm</button>
@@ -69,7 +69,7 @@
                         </div>
 
                         <div class="row" style="margin-top: 100px;">
-                            <x-banner_table :lists="$banner_lists"></x-banner_table>
+                            <x-slider_table :lists="$slider_lists"></x-slider_table>
                         </div>
                         
                     </div>
@@ -85,7 +85,7 @@
 <script>
     $( document ).ready(function() {
 
-        $("#table-1").dataTable({
+        $("#table-slider").dataTable({
         "columnDefs": [
             { "sortable": false, "targets": [2,3] }
         ]

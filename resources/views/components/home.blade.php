@@ -13,7 +13,7 @@
                 <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
                     <div class="container-fluid">
                         <fieldset>
-                            <legend class="text-3xl font-medium font-bold text-gray-900" style="font-weight: bold;">Features</legend>
+                            <legend class="text-3xl font-bold text-gray-900" style="font-weight: bold;">Features</legend>
                             <small class="text-muted">( You can choose one of the option to navigate )</small>
                         </fieldset>
                         <br>
@@ -28,7 +28,7 @@
                                             <div class="card-body">
                                                 <h5 class="card-title badge bg-info text-dark" style="font-size: 16px;">FAQ</h5>
                                                 <p class="card-text">Frequently asked question (FAQ) pages (or hubs) help your business respond to the needs of your audience more quickly and appropriately.</p>
-                                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                                {{-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> --}}
                                             </div>
                                         </div>
                                     </div>
@@ -45,7 +45,7 @@
                                             <div class="card-body">
                                                 <h5 class="card-title badge bg-info text-dark" style="font-size: 16px;">CAROUSEL BANNER</h5>
                                                 <p class="card-text">Frequently asked question (FAQ) pages (or hubs) help your business respond to the needs of your audience more quickly and appropriately.</p>
-                                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                                {{-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> --}}
                                             </div>
                                         </div>
                                     </div>
@@ -59,7 +59,7 @@
                         <div class="row text-center">
 
                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                <div class="card mb-3 trans" style="max-width: auto;">
+                                <div class="card mb-3 trans" style="max-width: auto;" onclick="window.location='{{ url("slider") }}'">
                                     <div class="row g-0">
                                         <div class="col-md-4">
                                             <img src="https://cdn.dribbble.com/users/319768/screenshots/4351086/canva-carousel.gif" class="img-fluid rounded-start mx-auto d-block" alt="...">
@@ -68,7 +68,7 @@
                                             <div class="card-body">
                                                 <h5 class="card-title badge bg-info text-dark" style="font-size: 16px;">SOCIAL MEDIA SLIDER</h5>
                                                 <p class="card-text">Frequently asked question (FAQ) pages (or hubs) help your business respond to the needs of your audience more quickly and appropriately.</p>
-                                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                                {{-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> --}}
                                             </div>
                                         </div>
                                     </div>
@@ -85,7 +85,7 @@
                                             <div class="card-body">
                                                 <h5 class="card-title badge bg-info text-dark" style="font-size: 16px;">CAMPAIGN POPUP</h5>
                                                 <p class="card-text">Frequently asked question (FAQ) pages (or hubs) help your business respond to the needs of your audience more quickly and appropriately.</p>
-                                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                                {{-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> --}}
                                             </div>
                                         </div>
                                     </div>
